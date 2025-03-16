@@ -21,12 +21,12 @@ export default function NavBar() {
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
               src="/logo.png"
-              alt="BHH logo"
+              alt="BHR logo"
               width="30"
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>BHH</p>
+            <p>BHR</p>
           </Link>
         </div>
       </div>

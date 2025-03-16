@@ -37,7 +37,7 @@ export default async function Home() {
         >
           <Twitter className="h-5 w-5 text-[#1d9bf0]" />
           <p className="text-sm font-semibold text-[#1d9bf0]">
-            Introducing BHH
+            Introducing BHR
           </p>
         </a>
         <h1
@@ -60,7 +60,7 @@ export default async function Home() {
      style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
   <a
     className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
-    href="https://github.com/"
+    href="https://podium.hackclub.com/events/recs3WKxylhLs1xow/rank"
     target="_blank"
     rel="noopener noreferrer"
   >

@@ -26,8 +26,8 @@ export default async function OG() {
         }}
       >
         <img
-          src={`https://${process.env.VERCEL_URL || "BHH.dev"}/logo.png`}
-          alt="BHH Logo"
+          src={`https://${process.env.VERCEL_URL || "burnedbyher.xyz"}/logo.png`}
+          alt="BHR Logo"
           tw="w-20 h-20 mb-4 opacity-95"
         />
         <h1
@@ -42,7 +42,7 @@ export default async function OG() {
             letterSpacing: "-0.02em",
           }}
         >
-          BHH
+          BHR
         </h1>
       </div>
     ),
