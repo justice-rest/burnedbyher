@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Card from "@/components/home/card";
-import { DEPLOY_URL } from "@/lib/constants";
 import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
@@ -11,7 +10,7 @@ import { nFormatter } from "@/lib/utils";
 export default async function Home() {
   const [openPopover, setOpenPopover] = useState(false);
   const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/steven-tey/BHH",
+    "https://api.github.com/repos/justice-rest/bbh",
     {
       ...(process.env.GITHUB_OAUTH_TOKEN && {
         headers: {
