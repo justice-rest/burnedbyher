@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react";
 import Card from "@/components/home/card";
 import { DEPLOY_URL } from "@/lib/constants";
