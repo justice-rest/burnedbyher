@@ -14,13 +14,13 @@ export default function ComponentGrid() {
         content={
           <div className="w-full rounded-md bg-white p-2 sm:w-40">
             <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
-              <a href="rare.burnedbyher.xyz">Rare</a>
+              <a href="https://rare.burnedbyher.xyz">Rare</a>
             </button>
             <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
-              <a href="mediumrare.burnedbyher.xyz">Medium Rare</a>
+              <a href="https://mediumrare.burnedbyher.xyz">Medium Rare</a>
             </button>
             <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
-              <a href="welldone.burnedbyher.xyz">Well Done</a>
+              <a href="https://welldone.burnedbyher.xyz">Well Done</a>
             </button>
           </div>
         }
