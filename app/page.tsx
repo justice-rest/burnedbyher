@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Card from "@/components/home/card";
 import { DEPLOY_URL } from "@/lib/constants";
 import { Github, Twitter } from "@/components/shared/icons";
@@ -5,8 +6,11 @@ import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
+import Popover from "@/components/shared/popover";
+import { ChevronDown } from "lucide-react";
 
 export default async function Home() {
+  const [openPopover, setOpenPopover] = useState(false);
   const { stargazers_count: stars } = await fetch(
     "https://api.github.com/repos/steven-tey/precedent",
     {
@@ -41,14 +45,17 @@ export default async function Home() {
           className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-          Building blocks for your Next project
+          Your Romantic Life
+          <br />
+              <span className="bg-co bg-gradient-to-r from-blue-500 via-green-600 to-indigo-500 bg-clip-text text-transparent">
+                Now Cooked
+              </span>
         </h1>
         <p
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-          An opinionated collection of components, hooks, and utilities for your
-          Next.js project.
+          The greatest collective of tools dedicated to roasting you :D
         </p>
         <div
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
@@ -76,6 +83,34 @@ export default async function Home() {
             </svg>
             <p>Deploy to Vercel</p>
           </a>
+          <Popover
+        content={
+          <div className="w-full rounded-md bg-white p-2 sm:w-40">
+            <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
+              <a href="rare.burnedbyher.xyz">Rare</a>
+            </button>
+            <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
+              <a href="mediumrare.burnedbyher.xyz">Medium Rare</a>
+            </button>
+            <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
+              <a href="welldone.burnedbyher.xyz">Well Done</a>
+            </button>
+          </div>
+        }
+        openPopover={openPopover}
+        setOpenPopover={setOpenPopover}
+      >
+        <button
+          onClick={() => setOpenPopover(!openPopover)}
+          className="flex w-36 items-center justify-between rounded-md border border-gray-300 px-4 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100"
+        >
+          <p className="text-gray-600">Popover</p>
+          <ChevronDown
+            className={`h-4 w-4 text-gray-600 transition-all ${openPopover ? "rotate-180" : ""
+              }`}
+          />
+        </button>
+      </Popover>
           <a
             className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
             href="https://github.com/steven-tey/precedent"
