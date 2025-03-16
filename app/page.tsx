@@ -14,7 +14,7 @@ import { ChevronDown } from "lucide-react";
 export default async function Home() {
   const [openPopover, setOpenPopover] = useState(false);
   const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/steven-tey/precedent",
+    "https://api.github.com/repos/steven-tey/BHH",
     {
       ...(process.env.GITHUB_OAUTH_TOKEN && {
         headers: {
@@ -33,14 +33,14 @@ export default async function Home() {
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <a
-          href="https://twitter.com/steventey/status/1613928948915920896"
+          href="https://twitter.com/"
           target="_blank"
           rel="noreferrer"
           className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
         >
           <Twitter className="h-5 w-5 text-[#1d9bf0]" />
           <p className="text-sm font-semibold text-[#1d9bf0]">
-            Introducing Precedent
+            Introducing BHH
           </p>
         </a>
         <h1
@@ -73,7 +73,7 @@ export default async function Home() {
               className="h-4 w-4 group-hover:text-black"
               viewBox="0 0 24 24"
               fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://www.burnedbyher.xyz"
             >
               <path
                 d="M12 4L20 20H4L12 4Z"
@@ -83,123 +83,22 @@ export default async function Home() {
                 strokeLinejoin="round"
               />
             </svg>
-            <p>Deploy to Vercel</p>
+            <p>Get cooked</p>
           </a>
-          <Popover
-        content={
-          <div className="w-full rounded-md bg-white p-2 sm:w-40">
-            <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
-              <a href="rare.burnedbyher.xyz">Rare</a>
-            </button>
-            <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
-              <a href="mediumrare.burnedbyher.xyz">Medium Rare</a>
-            </button>
-            <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
-              <a href="welldone.burnedbyher.xyz">Well Done</a>
-            </button>
-          </div>
-        }
-        openPopover={openPopover}
-        setOpenPopover={setOpenPopover}
-      >
-        <button
-          onClick={() => setOpenPopover(!openPopover)}
-          className="flex w-36 items-center justify-between rounded-md border border-gray-300 px-4 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100"
-        >
-          <p className="text-gray-600">Popover</p>
-          <ChevronDown
-            className={`h-4 w-4 text-gray-600 transition-all ${openPopover ? "rotate-180" : ""
-              }`}
-          />
-        </button>
-      </Popover>
           <a
             className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
-            href="https://github.com/steven-tey/precedent"
+            href="https://github.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Github />
             <p>
-              <span className="hidden sm:inline-block">Star on</span> GitHub{" "}
+              <span className="hidden sm:inline-block">Upvote on</span> Podium{" "}
               <span className="font-semibold">{nFormatter(stars)}</span>
             </p>
           </a>
         </div>
       </div>
-      <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, large }) => (
-          <Card
-            key={title}
-            title={title}
-            description={description}
-            demo={
-              title === "Beautiful, reusable components" ? (
-                <ComponentGrid />
-              ) : (
-                demo
-              )
-            }
-            large={large}
-          />
-        ))}
-      </div>
     </>
   );
 }
-
-const features = [
-  {
-    title: "Beautiful, reusable components",
-    description:
-      "Pre-built beautiful, a11y-first components, powered by [Tailwind CSS](https://tailwindcss.com), [Radix UI](https://www.radix-ui.com), and [Framer Motion](https://framer.com/motion). Used in production on [Dub.co](https://dub.co).",
-    large: true,
-  },
-  {
-    title: "Performance first",
-    description:
-      "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.",
-    demo: <WebVitals />,
-  },
-  {
-    title: "One-click Deploy",
-    description:
-      "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
-    demo: (
-      <a href={DEPLOY_URL}>
-        <Image
-          src="https://vercel.com/button"
-          alt="Deploy with Vercel"
-          width={120}
-          height={30}
-          unoptimized
-        />
-      </a>
-    ),
-  },
-  {
-    title: "Built-in Auth",
-    description:
-      "Precedent comes with authentication via [Clerk](https://clerk.com/)",
-    demo: (
-      <div className="flex items-center justify-center space-x-20">
-        <Image alt="Clerk logo" src="/clerk.svg" width={50} height={50} />
-      </div>
-    ),
-  },
-  {
-    title: "Hooks, utilities, and more",
-    description:
-      "Precedent offers a collection of hooks, utilities, and `@vercel/og`",
-    demo: (
-      <div className="grid grid-flow-col grid-rows-3 gap-10 p-10">
-        <span className="font-mono font-semibold">useIntersectionObserver</span>
-        <span className="font-mono font-semibold">useLocalStorage</span>
-        <span className="font-mono font-semibold">useScroll</span>
-        <span className="font-mono font-semibold">nFormatter</span>
-        <span className="font-mono font-semibold">capitalize</span>
-        <span className="font-mono font-semibold">truncate</span>
-      </div>
-    ),
-  },
-];

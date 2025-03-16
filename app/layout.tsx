@@ -7,10 +7,10 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import Navbar from "@/components/layout/navbar";
 
 export const metadata = {
-  title: "Precedent - Building blocks for your Next.js project",
+  title: "BHH - Building blocks for your Next.js project",
   description:
-    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
-  metadataBase: new URL("https://precedent.dev"),
+    "BHH is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
+  metadataBase: new URL("https://BHH.dev"),
 };
 
 export default async function RootLayout({
