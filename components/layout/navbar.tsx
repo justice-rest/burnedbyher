@@ -28,15 +28,6 @@ export default function NavBar() {
             ></Image>
             <p>Precedent</p>
           </Link>
-            <UserButton>
-              <UserButton.MenuItems>
-                <UserButton.Link
-                  label="Dashboard"
-                  labelIcon={<LayoutDashboard className="h-4 w-4" />}
-                  href="/"
-                />
-              </UserButton.MenuItems>
-            </UserButton>
         </div>
       </div>
     </>
