@@ -28,6 +28,11 @@ export default function NavBar() {
             ></Image>
             <p>BHR</p>
           </Link>
+          <Link href="https://podium.hackclub.com/events/recs3WKxylhLs1xow/rank">
+          <button className="rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-colors hover:bg-white hover:text-black">
+                Vote for us!
+          </button>
+          </Link>
         </div>
       </div>
     </>
