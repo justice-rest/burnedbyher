@@ -1,12 +1,8 @@
 "use client"
 
 import { useState } from "react";
-import Card from "@/components/home/card";
-import { DEPLOY_URL } from "@/lib/constants";
-import { Github, Twitter } from "@/components/shared/icons";
-import WebVitals from "@/components/home/web-vitals";
+import { Twitter } from "@/components/shared/icons";
 import ComponentGrid from "@/components/home/component-grid";
-import { nFormatter } from "@/lib/utils";
 
 export default async function Home() {
   const [openPopover, setOpenPopover] = useState(false);
@@ -56,6 +52,7 @@ export default async function Home() {
         >
           The greatest collective of tools dedicated to roasting you :D
         </p>
+        <br />
       <ComponentGrid />
       </div>
     </>

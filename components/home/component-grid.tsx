@@ -1,15 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { useDemoModal } from "@/components/home/demo-modal";
 import Popover from "@/components/shared/popover";
-import Tooltip from "@/components/shared/tooltip";
 import { ChevronDown } from "lucide-react";
 
 export default function ComponentGrid() {
   const [openPopover, setOpenPopover] = useState(false);
   return (
-    <div className="items-center">
+    <div className="flex justify-center items-center w-full">
       <Popover
         content={
           <div className="w-full rounded-md bg-white p-2 sm:w-40">
