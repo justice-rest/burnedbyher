@@ -14,7 +14,15 @@ export default function Footer() {
           BurnedByHer
         </a>
         <br />
-        Contact us [at] bonjour@burnedbyher.xyz
+        Contact us [at]
+        <a
+          className="font-semibold text-gray-600 underline-offset-4 transition-colors hover:underline"
+          href="mailto:bonjour@burnedbyher.xyz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          bonjour@burnedbyher.xyz
+        </a>
       </p>
     </div>
   );
