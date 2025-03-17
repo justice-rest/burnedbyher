@@ -30,14 +30,14 @@ export default async function Home() {
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <a
-          href="https://twitter.com/"
+          href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
           target="_blank"
           rel="noreferrer"
           className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
         >
           <Twitter className="h-5 w-5 text-[#1d9bf0]" />
           <p className="text-sm font-semibold text-[#1d9bf0]">
-            Introducing BHR
+            Introducing BBH
           </p>
         </a>
         <h1
@@ -56,10 +56,7 @@ export default async function Home() {
         >
           The greatest collective of tools dedicated to roasting you :D
         </p>
-        <div className="items-center" 
-     style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
-  <ComponentGrid />
-</div>
+      <ComponentGrid />
       </div>
     </>
   );

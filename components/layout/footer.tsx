@@ -13,6 +13,8 @@ export default function Footer() {
         >
           BurnedByHer
         </a>
+        <br />
+        Contact us [at] bonjour@burnedbyher.xyz
       </p>
     </div>
   );
