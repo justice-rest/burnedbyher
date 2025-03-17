@@ -56,7 +56,7 @@ export default async function Home() {
         >
           The greatest collective of tools dedicated to roasting you :D
         </p>
-        <div className="flex justify-center items-center mt-6 animate-fade-up opacity-0" 
+        <div className="items-center" 
      style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
   <ComponentGrid />
 </div>
