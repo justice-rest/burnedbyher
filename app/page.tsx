@@ -56,7 +56,11 @@ export default async function Home() {
         >
           The greatest collective of tools dedicated to roasting you :D
         </p>
-      <ComponentGrid />
+      </div>
+      
+      {/* ComponentGrid centered with flex container */}
+      <div className="flex justify-center items-center w-full mt-8">
+        <ComponentGrid />
       </div>
     </>
   );
