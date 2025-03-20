@@ -31,13 +31,13 @@ const DemoModal = ({
           </a>
           <h3 className="font-display text-2xl font-bold">Thank You!</h3>
           <p className="text-sm text-gray-500">
-            It really means a lot
+            It really means a lot!
             <br />
             <br />
             Click the button below to be redirected to the podium, from where you
             can scroll down and find our app, BurnedByHer!
             <br />
-            <br
+            <br />
             Click on it and other projects you&apos;d want to support. Once done, you
             can click on vote and you&apos;d have our great appreciation :D
           </p>
