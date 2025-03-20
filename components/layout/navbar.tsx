@@ -28,7 +28,7 @@ export default function NavBar() {
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>BHR</p>
+            <p>BHH</p>
           </Link>
           <DemoModal />
             <button
