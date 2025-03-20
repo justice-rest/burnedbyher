@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
 import { LayoutDashboard } from "lucide-react";
+import { useDemoModal } from "@/components/home/demo-modal";
 
 export default function NavBar() {
   const scrolled = useScroll(50);
+  const { DemoModal, setShowDemoModal } = useDemoModal();
 
   return (
     <>
@@ -28,11 +30,13 @@ export default function NavBar() {
             ></Image>
             <p>BHR</p>
           </Link>
-          <Link href="https://podium.hackclub.com/events/recs3WKxylhLs1xow/rank">
-          <button className="rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-colors hover:bg-white hover:text-black">
-                Vote for us!
-          </button>
-          </Link>
+          <DemoModal />
+            <button
+              onClick={() => setShowDemoModal(true)}
+              className="rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-colors hover:bg-white hover:text-black"
+            >
+              Vote for us
+            </button>
         </div>
       </div>
     </>
